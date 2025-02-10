@@ -1,0 +1,114 @@
+/* Mise en forme générale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal (centré) */
+#game-container {
+    display: flex;
+    justify-content: space-between;  /* Espacement entre les éléments */
+    align-items: center;  /* Centrer les éléments verticalement */
+    width: 90%;
+    max-width: 1000px;
+    gap: 40px; /* Augmente l'espace entre la carte, les boutons et l'historique */
+}
+
+/* Zone de la carte */
+#game-map {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);  /* 10 colonnes de 50px */
+    grid-template-rows: repeat(10, 50px);  /* 10 lignes de 50px */
+    gap: 2px;  /* Espacement entre les cellules */
+    background-color: #fff;
+    width: calc(10 * 50px + 9 * 2px);  /* Largeur = 10 colonnes * 50px + 9 gaps de 2px */
+    height: calc(10 * 50px + 9 * 2px); /* Hauteur = 10 lignes * 50px + 9 gaps de 2px */
+  }
+  
+
+/* Chaque cellule de la grille */
+.grid-cell {
+    width: 50px;
+    height: 50px;
+    background-color: #e1e1e1; /* Couleur de fond pour les cases vides */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain; /* Ajuster l'image pour ne pas déborder */
+    background-position: center; /* Centrer l'image dans la case */
+}
+
+/* Zone des boutons de contrôle */
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;  /* Augmenter l'espace entre les boutons */
+}
+
+.horizontal-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.control-btn {
+    font-size: 24px;
+    padding: 15px;
+    cursor: pointer;
+    min-width: 50px; /* Assure une taille minimale des boutons */
+}
+
+.horizontal-controls button {
+    font-size: 24px;
+    padding: 15px;
+    min-width: 50px;
+}
+
+/* Zone d'historique des actions */
+#action-log {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    max-height: 400px;
+    overflow-y: auto;
+    width: 250px;
+}
+
+#log-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#log-list li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Responsivité avec Bootstrap */
+@media (max-width: 768px) {
+    #game-container {
+        flex-direction: column; /* Empile les éléments sur petit écran */
+        gap: 20px;
+    }
+
+    #game-map {
+        margin-bottom: 20px;
+    }
+
+    #action-log {
+        width: 100%;
+    }
+}

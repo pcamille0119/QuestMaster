@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chasse au Trésor</title>
+  <!-- Ajout de Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-container" class="container d-flex flex-column flex-md-row justify-content-center align-items-center mt-4">
+    <!-- Zone de la carte (grille de jeu) -->
+    <div id="game-map" class="mb-4 mb-md-0"></div>
+
+    <!-- Zone des boutons de contrôle -->
+    <div id="controls" class="d-flex flex-column align-items-center mb-4 mb-md-0">
+      <button id="haut" class="control-btn btn btn-primary mb-3">⬆️</button>
+      <div class="horizontal-controls d-flex justify-content-center gap-3">
+        <button id="gauche" class="control-btn btn btn-primary">⬅️</button>
+        <button id="bas" class="control-btn btn btn-primary">⬇️</button>
+        <button id="droite" class="control-btn btn btn-primary">➡️</button>
+      </div>
+    </div>
+
+    <!-- Zone d'historique des actions -->
+    <div id="action-log" class="border rounded p-3 mb-4 mb-md-0 ms-md-4">
+      <h5>Historique des actions</h5>
+      <ul id="log-list" class="list-unstyled"></ul>
+    </div>
+  </div>
+
+  <!-- Scripts Bootstrap et JS de votre projet -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/role.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
