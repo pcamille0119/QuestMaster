@@ -1,31 +1,33 @@
-Objectifs et Fonctionnalités :
-1. Fonctionnalités de Base :
-Carte visible :
+# 🏴‍☠️ QuestMaster - Jeu Web Interactif
 
-Une arène de jeu représentée sous forme de grille (exemple : 10x10 cases).
-Les points d'intérêt (créatures ou trésor) sont indiqués par une icône générique.
-La position actuelle du joueur est clairement marquée.
-Placement aléatoire :
+Un jeu interactif dans une grille 10x10, où le joueur affronte des monstres et cherche un trésor, le tout **100% en JavaScript** sans rechargement de page !
 
-Le trésor, les créatures (entre 10 et 50), et le joueur doivent être placés aléatoirement sur la carte.
-Utilisez l'algorithme de Fisher-Yates pour garantir un placement équitable.
-Mécaniques de déplacement :
+## 🎯 Objectifs du Projet
 
-Le joueur peut se déplacer grâce à 4 boutons directionnels (haut, bas, gauche, droite).
-Aucune page ne doit se recharger : tout doit se passer en JavaScript.
-Interactions avec la carte :
+- Créer une **carte dynamique** représentant un champ d'aventure.
+- Ajouter des mécaniques de **déplacement**, **combat**, et **victoire** ou **défaite**.
+- Afficher un **historique des actions** en temps réel.
+- Optimiser l’interface avec **Bootstrap 5** et du CSS custom.
 
-Lorsqu'un joueur rencontre une créature :
-Le joueur confronte sa force aux points de vie de la créature.
-Si la créature meurt, le joueur regagne ses points de vie et gagne en points d’expérience.
-Si la créature survit, elle attaque le joueur, réduisant ses points de vie.
-Si le joueur meurt, la partie se réinitialise.
-Lorsqu'un joueur trouve le trésor, la partie se termine par une victoire.
-Un historique des actions (texte) doit informer le joueur en temps réel de ses actions et de leurs conséquences.
+## 🚀 Fonctionnalités
 
-2. Critères d'interface :
-L'interface doit être intuitive et facile à comprendre :
-Les boutons de contrôle doivent être clairement identifiés.
-Les actions du joueur doivent être visibles en temps réel dans une zone dédiée.
-La carte et les éléments de jeu doivent être visuellement agréables :
-Une attention particulière doit être portée aux couleurs, polices, tailles, et espacement des boutons pour éviter des erreurs de clics.
+- **Grille dynamique** 10x10 avec créatures, trésor et joueur.
+- **Déplacement** du joueur via des boutons directionnels.
+- **Combat dynamique** selon les points de vie/attaque du joueur et du monstre.
+- **Fin de partie automatique** : victoire (trésor trouvé) ou défaite (joueur mort).
+- **Historique des actions** affiché en temps réel.
+- Interface responsive grâce à **Bootstrap**.
+
+## 🛠️ Technologies
+
+- **HTML / CSS / JavaScript**
+- **Bootstrap 5** via CDN
+- Code structuré en modules : `main.js`, `map.js`, `role.js`, `utils.js`, `style.css`
+
+## ⚙️ Installation & Lancement
+
+Aucun framework requis !
+
+1. Clone ou télécharge le projet
+2. Ouvre `index.html` dans ton navigateur
+3. C’est parti !
